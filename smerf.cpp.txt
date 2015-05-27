@@ -1,0 +1,22 @@
+#ifndef SMERF_H
+#define SMERf_H
+#include<iostream>
+#include<cstdlib>
+
+class smerf
+{
+public:
+	int x;
+	int y;
+	int zywy;
+        smerf(int,int)
+
+};
+smerf::smerf(int rozmiarx,in rozmiary)
+{
+  x=std::rand()%rozmiarx;
+  y=std::rand()%rozmiary;
+  zywy=1;
+}
+
+#endif
