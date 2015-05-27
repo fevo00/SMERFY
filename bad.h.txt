@@ -7,11 +7,12 @@
 const int size = 100;
 
 class bad{
-public:
+private:
 	int x;
 	int y;
-private:	
-	int rand(void);	
+public:	
+	bad();
+	int random(void);	
 };
 
 
