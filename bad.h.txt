@@ -1,0 +1,20 @@
+#ifndef BAD_H
+#define BAD_H 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+const int size = 100;
+
+class bad{
+public:
+	int x;
+	int y;
+private:	
+	int rand(void);	
+};
+
+
+
+
+#endif
