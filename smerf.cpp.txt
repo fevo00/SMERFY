@@ -1,0 +1,48 @@
+#include"smerf.h"
+
+smerf::smerf()
+{
+  x=std::rand()%100;
+  y=std::rand()%100;
+  rozx=100;
+  rozy=100;
+  zywy=1;
+}
+
+void smerf::martwy()
+{
+ zywy=0;
+}
+
+void smerf::losuj()
+{
+  int nowax=0;
+  int noway=0;
+  int gorax;
+  int goray;
+  int sumax;
+  int sumay;
+  sumax=x+nowax;
+  sumay=y+noway;
+  do{
+      nowax=std::rand()%6;
+      noway=std::rand()%6;
+
+      gorax=std::rand()%2;
+      goray=std::rand()%2;
+
+      if(gorax==0)
+      	{sumax=x-nowax;}
+      if(goray==0)
+      	{sumay=y-noway;}
+      if(gorax==1)
+      	{sumax=x+nowax;}
+      if(goray==1)
+      	{sumay=y+noway;}
+    }
+  while(sumax<0||sumax>rozx||sumay<0||sumay>rozy) 
+  x=sumax;
+  y=sumay;
+}
+
+#endif
