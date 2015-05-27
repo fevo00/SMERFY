@@ -1,0 +1,18 @@
+#ifndef SMERF_H
+#define SMERf_H
+#include<iostream>
+#include<cstdlib>
+
+class smerf
+{
+public:
+	int x;
+	int y;
+	int rozx;
+	int rozy;
+	int zywy;
+        smerf(int,int);
+	void martwy();
+	void losuj();
+
+};
