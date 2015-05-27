@@ -7,10 +7,9 @@
 const int size = 100;
 
 class bad{
-private:
+public:	
 	int x;
 	int y;
-public:	
 	bad();
 	int random(int, int);
 	void move(void);

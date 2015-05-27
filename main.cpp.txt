@@ -16,14 +16,18 @@ int main(void){
 	if (!badtab) return -1;	
 	
 	for (int i=0; i<gametime; i++){
-		bad[0].move();
-		bad[1].move();
+		badtab[0].move();
+		badtab[1].move();
 		for (int j=0; j<smrfnr; j++){
 			smerftab[j].losuj();
-				
+			if((smerftab[j].x-badtab[0].x<5&&smerftab[j].x-badtab[0].x>-5)||
+				(smerftab[j].y-badtab.y[0]<5&&smerftab[j].y-badtab.y[0]>-5)||
+				(smerftab[j].x-badtab[1].x<5&&smerftab[j].x-badtab[1].x>-5)||
+				(smerftab[j].y-badtab[1].x<5&&smerftab[j].y-badtab[1].x>-5)	
 		}
 	}
 	delete [] badtab;
 	delete [] smerftab;
 	return 0;
 }
+
