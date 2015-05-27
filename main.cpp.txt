@@ -1,0 +1,29 @@
+#include <iostream>
+#include "bad.h"
+#include "smerf.h"
+using namespace std;
+
+const int gametime = 100;
+const int smrfnr = 20;
+
+int main(void){
+	smerf *smerftab;
+	smerftab = new smerf[smrfnr];
+	if (!smerftab) return -1;
+
+	bad *badtab;
+	badtab = new bad[2];
+	if (!badtab) return -1;	
+	
+	for (int i=0; i<gametime; i++){
+		bad[0].move();
+		bad[1].move();
+		for (int j=0; j<smrfnr; j++){
+			smerftab[j].losuj();
+				
+		}
+	}
+	delete [] badtab;
+	delete [] smerftab;
+	return 0;
+}
