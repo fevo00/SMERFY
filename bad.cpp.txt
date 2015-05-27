@@ -1,8 +1,8 @@
 #include "bad.h"
 
 bad::bad(){
-	x = random(50, 100);
-	y = random(50, 100);
+	x = random(size/2, size);
+	y = random(size/2, size);
 }
 
 int bad::random(int cord, int range){
@@ -13,4 +13,8 @@ int bad::random(int cord, int range){
 	return cord;
 }
 
-void bad::move(void)
+void bad::move(void){
+	do{x=random(x, 10);} while (x>=0 && x<size)
+	do{y=random(y, 10);} while (y>=0 && y<size)
+	
+}
