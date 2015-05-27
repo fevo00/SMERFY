@@ -2,6 +2,10 @@
 #include "bad.h"
 #include "smerf.h"
 using namespace std;
+#DEFINE SMERF 1
+#DEFINE EMPTY 0
+#DEFINE GARGAMEL 2
+#DEFINE KLAKIER 3
 
 const int gametime = 100;
 const int smrfnr = 20;
@@ -15,6 +19,13 @@ int main(void){
 	badtab = new bad[2];
 	if (!badtab) return -1;	
 	
+	int game[100][100]={0};
+
+				for (int j=0; j<smrfnr; j++)
+					if(smerftab[j].zywy==1) game[smerftab[j].x][smerftab[j].y] = SMERF;
+			
+	
+
 	for (int i=0; i<gametime; i++){
 		badtab[0].move();
 		badtab[1].move();
@@ -23,9 +34,22 @@ int main(void){
 			if((smerftab[j].x-badtab[0].x<5&&smerftab[j].x-badtab[0].x>-5)||
 				(smerftab[j].y-badtab.y[0]<5&&smerftab[j].y-badtab.y[0]>-5)||
 				(smerftab[j].x-badtab[1].x<5&&smerftab[j].x-badtab[1].x>-5)||
-				(smerftab[j].y-badtab[1].x<5&&smerftab[j].y-badtab[1].x>-5)	
+				(smerftab[j].y-badtab[1].x<5&&smerftab[j].y-badtab[1].x>-5))
+					{
+					 smerftab[j].martwy();	
+					}
+				
+		}
+		for (int row=0; row<100; row++){
+			for (int col=0; col<100; col++){
+
+			cout << game[row][col] << " ";
+			}
+		cout << endl;
 		}
 	}
+	
+
 	delete [] badtab;
 	delete [] smerftab;
 	return 0;
