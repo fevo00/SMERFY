@@ -12,7 +12,8 @@ private:
 	int y;
 public:	
 	bad();
-	int random(void);	
+	int random(int, int);
+	void move(void);
 };
 
 
