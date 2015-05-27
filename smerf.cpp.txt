@@ -1,11 +1,11 @@
 #include"smerf.h"
 
-smerf::smerf(int rozmiarx,int rozmiary)
+smerf::smerf()
 {
-  x=std::rand()%rozmiarx;
-  y=std::rand()%rozmiary;
-  rozx=rozmiarx;
-  rozy=rozmiary;
+  x=std::rand()%100;
+  y=std::rand()%100;
+  rozx=100;
+  rozy=100;
   zywy=1;
 }
 
